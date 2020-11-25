@@ -11,22 +11,34 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <a href="#" class="logo">
-            <img src="images/logo-olx.png" />
-        </a>
-        <ul>
-            <li>
-                <div id='search-button' class="search-container">
-                    <input type="text" disabled /><button class="search-button">Buscar</button>
-                </div>
-            </li>
-            <li><button id='profile-button'>Ingresar</button></li>
-            <li><button class="publish-button">Publicar</button></li>
-        </ul>
-        <span class="burger-menu">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </span>
-        
+        <div class="inline-container">
+            <a href="#" class="logo">
+                <img src="images/logo-olx.png" />
+            </a>
+            <ul>
+                <li>
+                    <div id='search-button' class="search-container">
+                        <input type="text" disabled /><button class="search-button">Buscar</button>
+                    </div>
+                </li>
+                <li><button id='profile-button'>Ingresar</button></li>
+                <li><button class="publish-button">Publicar</button></li>
+            </ul>
+            <button onclick="openMenu()" id='burger-menu' class="burger-menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id='expanded-container' class="expanded-container">
+            <ul>
+                <li>
+                    <div id='search-button' class="search-container">
+                        <input type="text" disabled /><button class="search-button">Buscar</button>
+                    </div>
+                </li>
+                <li><button id='profile-button'>Ingresar</button></li>
+                <li><button class="publish-button">Publicar</button></li>
+            </ul>
+        </div>
     </nav>
     <div class="body-container">
         <main>
@@ -159,5 +171,6 @@
     </div>
 
     <script src="javascript/modal.js"></script>
+    <script src="javascript/navbar.js"></script>
 </body>
 </html>

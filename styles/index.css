@@ -24,9 +24,22 @@ input:focus {
 .nav-bar {
     background-color: #1a263d;
     padding: 10px 20px;
+}
+
+.inline-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.expanded-container {
+    display: none;
+}
+
+.burger-menu {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 .burger-menu i {
@@ -39,6 +52,9 @@ input:focus {
 .nav-bar ul {
     margin: 0;
     padding: 0;
+}
+
+.nav-bar .inline-container ul {
     display: none;
     /* display flex cuando se visualiza */
     height: 35px;
@@ -46,8 +62,16 @@ input:focus {
 
 .nav-bar ul li {
     list-style: none;
-    margin: 0 1rem;
     display: flex;
+}
+
+.nav-bar .inline-container ul li {
+    margin: 0 1rem;
+}
+
+.nav-bar .expanded-container ul li {
+    margin: .8rem 0;
+    height: 30px;
 }
 
 #profile-button {
@@ -177,10 +201,13 @@ main {
         padding-left: 120px;
         padding-right: 120px;
     }
-    .nav-bar ul {
+    .nav-bar .inline-container ul {
         display: flex;
     }
     .burger-menu {
+        display: none;
+    }
+    .nav-bar .expanded-container {
         display: none;
     }
 }
