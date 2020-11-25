@@ -29,6 +29,13 @@ input:focus {
     align-items: center;
 }
 
+.burger-menu i {
+    padding: 15px 10px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
 .nav-bar ul {
     margin: 0;
     padding: 0;
@@ -43,12 +50,10 @@ input:focus {
     display: flex;
 }
 
-.nav-bar ul a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    align-items: center;
+#profile-button {
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
+    background-color: transparent;
 }
 
 .nav-bar button {
@@ -163,7 +168,7 @@ main {
     font-size: 10px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
     .body-container {
         padding-left: 120px;
         padding-right: 120px;
@@ -175,40 +180,7 @@ main {
     .nav-bar ul {
         display: flex;
     }
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+    .burger-menu {
+        display: none;
+    }
 }

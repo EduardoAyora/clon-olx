@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Olx clone</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="nav-bar">
@@ -14,13 +16,17 @@
         </a>
         <ul>
             <li>
-                <div id='myBtn' class="search-container">
+                <div id='search-button' class="search-container">
                     <input type="text" disabled /><button class="search-button">Buscar</button>
                 </div>
             </li>
-            <li><a href="#">Ingresar</a></li>
+            <li><button id='profile-button'>Ingresar</button></li>
             <li><button class="publish-button">Publicar</button></li>
         </ul>
+        <span class="burger-menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </span>
+        
     </nav>
     <div class="body-container">
         <main>
@@ -111,15 +117,47 @@
         </main>
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+    <!-- Search Modal -->
+    <div class='overlay-styles search-modal'></div>
+    <div class='modal-styles search-modal'>
+        <div class='header-styles'>
+            <span>Busqueda</span>
+            <button class='header-button-style close'>
+                X
+            </button>
+        </div>
+        <div>
+            <div class='body-styles'>
+                <div class="search-group">
+                    <input />
+                    <button>Buscar</button>
+                </div>
+            </div>
+            <div class='footer-styles'>
+                <button class='footer-button-style close-button close'>Cerrar</button>
+            </div>
         </div>
     </div>
-    <script src="modal.js"></script>
 
+    <!-- Profile Modal -->
+    <div class='overlay-styles profile-modal'></div>
+    <div class='modal-styles profile-modal'>
+        <div class='header-styles'>
+            <span>Ingresar</span>
+            <button class='header-button-style close'>
+                X
+            </button>
+        </div>
+        <div>
+            <div class='body-styles'>
+                profile
+            </div>
+            <div class='footer-styles'>
+                <button class='footer-button-style ok-button close'>Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/modal.js"></script>
 </body>
 </html>
